@@ -1,0 +1,261 @@
+*{
+    font-family: Bahnschrift,serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 240px;
+    height: 100%;
+    background-color:#163F52;
+    border-left:10px solid #163F52 ;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 67px;
+}
+.navigation ul{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.navigation ul li :hover,
+.hovered{
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-color: white;
+}
+
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+.navigation ul li a{
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+.navigation ul li a:hover,
+.navigation ul li.hovered a{
+    color: #26D698;
+}
+.icon{
+    position: relative;
+    display: block;
+    width: 36px;
+    height: 30px;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 14px;
+    padding-left: 10px;
+}
+.navigation ul li a .logo{
+    position: relative;
+    display: block;
+    min-width: 50px;
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 14px;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+.navigation ul li a .titleLogo{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 80px;
+}
+.main{
+    position: absolute;
+    width: calc(100% - 240px);
+    left: 240px;
+    min-height: 100vh;
+    background-color: white;
+    transition: 0.5s;
+    padding-right: 4rem;
+}
+.main.active{
+    width: calc(100% - 67px);
+    left:67px;
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 10px;
+}
+.toggle{
+    position: relative;
+    top:0;
+    cursor: pointer;
+}
+.user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.perfil{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+/*---------contenido---------*/
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding:20px ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 20px ;
+}
+.cardBox .card{
+    position: relative;
+    background: white;
+    box-shadow: 0 7px 10px #E6E7E6;
+    text-align: center;
+    border-radius: 20px;
+}
+.cardBox .card .monto{
+    position: relative;
+    margin: 30px;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.cardBox .card .fecha{
+    font-size: 0.8rem;
+    color: #B3B8B6;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px
+}
+.cliente1{
+    background-color: #FFE9E9;
+}
+.cliente2{
+    background-color: #FFFBD9;
+}
+.cliente3{
+    background-color: #FFF0E5;
+}
+.cardBox .card:hover{
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+.detalles{
+    position: relative;
+    width: 100%;
+    padding:20px ;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px ;
+    margin-top: 10px;
+}
+.detalles .Prestamos{
+    position: relative;
+    display: grid;
+    min-height: 300px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 7px 10px #E6E7E6;
+    border-radius: 20px;
+}
+.h2{
+    font-weight: 500;
+    color: #26D698;
+}
+.detalles table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.detalles table thead td{
+    font-weight: 500;
+}
+table tr td{
+    padding: 10px;
+}
+table tbody tr{
+    color: black;
+    border-bottom:1px solid #E6E7E6;
+}
+.Prestamos table tbody tr:hover{
+    background-color: #eae9e9;
+}
+.Prestamos table tr:last-child{
+    border-bottom: none;
+}
+.Prestamos table tr td:last-child{
+    text-align: end;
+}
+.status.enprogreso{
+    padding: 2px 4px;
+    background-color: #c1eedb;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status.saldado{
+    padding: 2px 4px;
+    background-color: #9f9f9f;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status.vencido{
+    padding: 2px 4px;
+    background-color: #f6bdbd;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.detalles .Clientes{
+    position: relative;
+    display: grid;
+    min-height: 300px;
+    background-color: white;
+    box-shadow: 0 7px 10px #E6E7E6;
+    border-radius: 20px;
+}
+.Clientes table tr:last-child{
+    border-bottom: none;
+}

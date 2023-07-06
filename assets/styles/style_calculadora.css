@@ -1,0 +1,207 @@
+*{
+    font-family: Bahnschrift,serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 240px;
+    height: 100%;
+    background-color:#163F52;
+    border-left:10px solid #163F52 ;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 67px;
+}
+.navigation ul{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.navigation ul li :hover,
+.hovered{
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-color: white;
+}
+
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+.navigation ul li a{
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+.navigation ul li a:hover,
+.navigation ul li.hovered a{
+    color: #26D698;
+}
+.icon{
+    position: relative;
+    display: block;
+    width: 36px;
+    height: 30px;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 14px;
+    padding-left: 10px;
+}
+.navigation ul li a .logo{
+    position: relative;
+    display: block;
+    min-width: 50px;
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 14px;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+.navigation ul li a .titleLogo{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 80px;
+}
+.main{
+    position: absolute;
+    width: calc(100% - 240px);
+    left: 240px;
+    min-height: 100vh;
+    background-color: white;
+    transition: 0.5s;
+    padding-right: 4rem;
+}
+.main.active{
+    width: calc(100% - 67px);
+    left:67px;
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 10px;
+}
+.toggle{
+    position: relative;
+    top:0;
+    cursor: pointer;
+}
+.user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.perfil{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content{
+    color: white;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.calculator {
+    width: 600px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    margin-top: 80px;
+    border-radius:20px;
+}
+
+.calculator input[type="button"] {
+    width: 130px;
+    height: 70px;
+    margin: 5px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius:10px;
+}
+.calculator input[type="text"]{
+    width: 580px;
+    height: 50px;
+    border-radius:10px;
+
+}
+.card-title{
+    font-weight: 800;
+    color: #163F52;
+    margin-top: 20px;
+    font-size: 30px;
+}
+header{
+    background-color: #163F52;
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 16% 0px;
+    z-index: 1;
+}
+.imgLogo{
+    height: 60px;
+    margin-top: 15px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0px 5px;
+    top:auto;
+}
+nav ul li a{
+    color: #818f96;
+    font-size: 15px;
+    padding: 7px 10px;
+}
+
+
+li a.active, li a:hover{
+    color:white;
+    transition: 0.5s;
+}

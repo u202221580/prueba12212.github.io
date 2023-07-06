@@ -1,0 +1,233 @@
+*{
+    font-family: Bahnschrift,serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 240px;
+    height: 100%;
+    background-color:#163F52;
+    border-left:10px solid #163F52 ;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 67px;
+}
+.navigation ul{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.navigation ul li :hover,
+.hovered{
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-color: white;
+}
+
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+.navigation ul li a{
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+.navigation ul li a:hover,
+.navigation ul li.hovered a{
+    color: #26D698;
+}
+.icon{
+    position: relative;
+    display: block;
+    width: 36px;
+    height: 30px;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 14px;
+    padding-left: 10px;
+}
+.navigation ul li a .logo{
+    position: relative;
+    display: block;
+    min-width: 50px;
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 14px;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+.navigation ul li a .titleLogo{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 80px;
+}
+.main{
+    position: absolute;
+    width: calc(100% - 240px);
+    left: 240px;
+    min-height: 100vh;
+    background-color: white;
+    transition: 0.5s;
+    padding-right: 4rem;
+}
+.main.active{
+    width: calc(100% - 67px);
+    left:67px;
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 10px;
+}
+.toggle{
+    position: relative;
+    top:0;
+    cursor: pointer;
+}
+.user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.perfil{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content{
+    color: white;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar {
+    width: 600px;
+    background-color: #163f52;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin:0 auto;
+}
+
+.header {
+    background-color: #26D698;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header button {
+    background-color: #26D698;
+    color: #163f52;
+    border: none;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header button:hover {
+    background-color: #163f52;
+    color: white;
+}
+
+.calendar table {
+    width: 100%;
+}
+
+.calendar th,
+.calendar td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #26D698;
+}
+
+.calendar th {
+    background-color: #26D698;
+    color: #163f52;
+    font-weight: bold;
+}
+
+.calendar td {
+    cursor: pointer;
+}
+
+.calendar td:hover {
+    background-color: #26D698;
+    color: #163f52;
+}
+
+.current-month {
+    background-color: #26D698;
+    color: #163f52;
+    font-weight: bold;
+}
+
+.fade {
+    animation: fade 0.5s;
+}
+.recordatorio{
+    width: 480px;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 7px 10px #E6E7E6;
+    border-radius: 20px;
+    color: #163F52;
+    margin:20px auto;
+}
+
+.imagen{
+    width: 140px;
+}
+.texto{
+    margin: auto;
+}
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
